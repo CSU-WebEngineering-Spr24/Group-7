@@ -1,0 +1,14 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùô¡ãùÿÿÿÿ
+m	java:S116"SRename this field "app_temp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚€·³şÿÿÿÿ
+n	java:S116"TRename this field "city_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ïƒ›ıÿÿÿÿ
+q	java:S116"WRename this field "country_code" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÏÄùÿÿÿÿ
+i	java:S116"URename this field "elev_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÏ
+l	java:S116"RRename this field "h_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅìÁşÿÿÿÿ
+g	java:S116"RRename this field "ob_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãî€°
+n	java:S116%"TRename this field "solar_rad" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“±¿úüÿÿÿÿ
+j	java:S116'"URename this field "state_code" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ§¼†
+n	java:S1161"TRename this field "wind_cdir" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôƒ¶°ùÿÿÿÿ
+s	java:S1162"YRename this field "wind_cdir_full" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÉ§¼ÿÿÿÿÿ
+m	java:S1163"SRename this field "wind_dir" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¨ùÿÿÿÿ
+h	java:S1164"SRename this field "wind_spd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íäÑù

@@ -1,0 +1,12 @@
+
+_
+java:S1192!"JDefine a constant instead of duplicating this literal "&country=" 3 times.(Â„‚
+v
+java:S1488I"`Immediately return this expression instead of assigning it to the temporary variable "response".(Çì¾Ó
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘¹Ù.
+W	java:S107"=Method has 14 parameters, which is greater than 7 authorized.(þ¡¬‘ÿÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(þ¡¬‘ÿÿÿÿÿ
+Q	java:S125H"<This block of commented-out lines of code should be removed.(ü¯¡
+@	java:S106a"+Replace this use of System.out by a logger.(æ¼ú‚
+?	java:S106c"+Replace this use of System.out by a logger.(ôÚÞ8
