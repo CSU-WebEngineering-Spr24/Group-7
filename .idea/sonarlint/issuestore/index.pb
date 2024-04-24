@@ -23,16 +23,12 @@ E
 QWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/model/WeatherData.java,8\2\82df7e47216a082654c9d849b3dc9cbb2acfd88f
 ä
 ZWeatherApi/src/test/java/com/csu/webEngineering/WeatherApi/WeatherApiApplicationTests.java,a\b\abf40ebd923f9dceb408988678f4a055460b9c04
-~
-NWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/WeatherService.java,d\a\da55e04a4bf521b97b09036aeebc091e286cbf5d
 Ü
 VWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/service/WeatherService.java,2\1\215e729120eaf197e2ed66e07d126c17c4b08087
 Ñ
 TWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/model/AirQualityData.java,0\6\06745d7d430f0a591dae12636cf37900f0ea003f
 Ä
 PWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/model/AirQuality.java,c\9\c9494509f7776ff235d4b63595f656a09713ee3c
-Å
-Q.idea/sonarlint/securityhotspotstore/d/a/da55e04a4bf521b97b09036aeebc091e286cbf5d,c\2\c2315722970650fd59df3e2545009383b294eaf9
 Å
 Q.idea/sonarlint/securityhotspotstore/8/1/81e4fc24da839bd09eaac897b8503806b9d54f0e,a\c\acc001cc3e939825b14d96f98370724b85153468
 Å
@@ -75,3 +71,7 @@ G.idea/sonarlint/issuestore/3/c/3c015159a076188cdc3c71323acb06b23e037fb1,e\c\ec
 Q.idea/sonarlint/securityhotspotstore/9/b/9b7ca930dd87a9c1ade93776799a4d430dafab3a,9\0\90ff8ea3f7df0aa3e9c007ab0e00525cc6bb2854
 Å
 Q.idea/sonarlint/securityhotspotstore/c/9/c9494509f7776ff235d4b63595f656a09713ee3c,f\b\fb5b8062d36210544ba2a838e3eb73d763c33eb7
+â
+YWeatherApi/src/main/java/com/csu/webEngineering/WeatherApi/controller/HomeController.java,d\1\d1a608d13e2fdcd7bf53f11ab36d7daac2ca340c
+P
+ WeatherApi/src/main/react/App.js,c\0\c0a2bd2bfe3c9ad23789e9b88bd17d1b2ccf38f4
