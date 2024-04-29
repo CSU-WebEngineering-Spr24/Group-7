@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './WeatherComponent.css'; // Import CSS file for styling
 
 const WeatherComponent = () => {
   const [city, setCity] = useState('');
@@ -34,14 +35,9 @@ const WeatherComponent = () => {
       if (!response.ok) {
         throw new Error('Failed to fetch weather data');
       }
-    //  const response = await fetch(url);
-      const responseData = await response.text();
-      console.log(responseData); // Log the response data
-      const data = JSON.parse(responseData);
-      //
-     // const data = await response.json();
-      console.log(data);
-      setWeatherData(data);
+
+      const responseData = await response.json();
+      setWeatherData(responseData);
       setLoading(false);
     } catch (error) {
       setError(error.message);
@@ -50,56 +46,48 @@ const WeatherComponent = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="mb-4">Weather Information</h2>
-      <div className="row mb-3">
-        <div className="col">
-          <label htmlFor="city" className="form-label">City:</label>
-          <input
-            type="text"
-            id="city"
-            value={city}
-            onChange={handleCityChange}
-            className="form-control"
-          />
-        </div>
-        <div className="col">
-          <label htmlFor="latitude" className="form-label">Latitude:</label>
-          <input
-            type="text"
-            id="latitude"
-            value={latitude}
-            onChange={handleLatitudeChange}
-            className="form-control"
-          />
-        </div>
-        <div className="col">
-          <label htmlFor="longitude" className="form-label">Longitude:</label>
-          <input
-            type="text"
-            id="longitude"
-            value={longitude}
-            onChange={handleLongitudeChange}
-            className="form-control"
-          />
-        </div>
+    <div className="weather-container">
+      <h2 className="weather-heading">Weather Information</h2>
+      <div className="weather-inputs">
+        <input
+          type="text"
+          placeholder="Enter City Name"
+          value={city}
+          onChange={handleCityChange}
+          className="weather-input"
+        />
+        <input
+          type="text"
+          placeholder="Enter Latitude"
+          value={latitude}
+          onChange={handleLatitudeChange}
+          className="weather-input"
+        />
+        <input
+          type="text"
+          placeholder="Enter Longitude"
+          value={longitude}
+          onChange={handleLongitudeChange}
+          className="weather-input"
+        />
+        <button onClick={handleSearch} className="weather-button">Search</button>
       </div>
-      <div className="text-center">
-        <button onClick={handleSearch} className="btn btn-primary">Search</button>
+      <div className="weather-data">
+        {loading ? (
+          <p className="weather-loading">Loading...</p>
+        ) : error ? (
+          <p className="weather-error">Error: {error}</p>
+        ) : weatherData ? (
+          <div className="weather-info">
+            <p>Temperature: {weatherData.data[0].temp}</p>
+            <p>Humidity: {weatherData.data[0].rh}</p>
+            {/* Add more weather data fields here */}
+          </div>
+        ) : (
+          <p className="weather-no-data">No weather data available</p>
+        )}
       </div>
-      {loading ? (
-        <p className="mt-3">Loading...</p>
-      ) : error ? (
-        <p className="mt-3">Error: {error}</p>
-      ) : weatherData ? (
-        <div className="mt-3">
-         <p>Temperature: {weatherData.data[0].temp}</p>
-    <p>Humidity: {weatherData.data[0].rh}</p>
-          {/* Add more weather data fields here */}
-        </div>
-      ) : (
-        <p className="mt-3">No weather data available</p>
-      )}
+
     </div>
   );
 };

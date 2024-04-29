@@ -45,3 +45,28 @@
     background-color: #f0f0f0; /* Change this to your desired background color */
   }
   
+  .header {
+    background-color: #333; /* Example background color */
+    padding: 20px;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between nav items */
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0; /* Remove margin from last nav item */
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
