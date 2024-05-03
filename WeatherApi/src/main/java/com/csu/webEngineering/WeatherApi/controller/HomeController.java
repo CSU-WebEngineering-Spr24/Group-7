@@ -1,3 +1,4 @@
+
 package com.csu.webEngineering.WeatherApi.controller;
 
 import org.springframework.stereotype.Controller;
@@ -11,4 +12,6 @@ class HomeController {
     public String index(){
         return "index";
     }
+    
 }
+

@@ -23,3 +23,23 @@
     color: white;
     text-decoration: none;
   }
+  .user-info {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .welcome-message {
+    margin-right: 20px;
+  }
+  
+  .sign-out-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+    cursor: pointer;
+  }

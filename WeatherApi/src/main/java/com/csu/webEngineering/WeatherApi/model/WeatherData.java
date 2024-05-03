@@ -49,7 +49,7 @@ public class WeatherData {
         private String wind_cdir;
         private String wind_cdir_full;
         private int wind_dir;
-        private double wind_spd;
+       // private double wind_spd;
 
         // Getters and setters for all fields
         // WeatherDescription class definition is also needed

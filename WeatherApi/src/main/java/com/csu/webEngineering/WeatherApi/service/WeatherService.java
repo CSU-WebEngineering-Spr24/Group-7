@@ -4,6 +4,7 @@ package com.csu.webEngineering.WeatherApi.service;
 import com.csu.webEngineering.WeatherApi.model.AirQualityData;
 import com.csu.webEngineering.WeatherApi.model.WeatherApiResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -17,7 +18,8 @@ class WeatherService {
     RestTemplate restTemplate = new RestTemplate ( );
 
     public
-    ResponseEntity<WeatherApiResponse> getWeather ( Double lat , Double lon , String lang , String units , String include , String city , String state , String country , String postalCode , String cityId , String station , String cities , String stations , String points ) {
+    ResponseEntity<WeatherApiResponse> 
+     getWeather ( Double lat , Double lon , String lang , String units , String include , String city , String state , String country , String postalCode , String cityId , String station , String cities , String stations , String points ) {
         String apiUrl = "http://api.weatherbit.io/v2.0/current";
         String fullUrl = apiUrl + "?key=" + apiKey;
 
@@ -71,8 +73,21 @@ class WeatherService {
 
         // RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<WeatherApiResponse> response = restTemplate.getForEntity ( fullUrl , WeatherApiResponse.class );
-        return response;
+        if (response.getStatusCode() == HttpStatus.OK) {
+            return ResponseEntity.ok(response.getBody());
+        } else {
+            // If response is not OK, construct a new ResponseEntity with appropriate status code
+            WeatherApiResponse errorResponse = new WeatherApiResponse();
+            errorResponse.setCount(0);
+            errorResponse.setData(null);
+            // return new ResponseEntity<>(errorResponse, response.getStatusCode());
+            return ResponseEntity.ok(errorResponse);
+        }
+
+       
     }
+
+
 
     public
     ResponseEntity<AirQualityData> getAirQuality ( Double lat , Double lon , String city , String state , String country ) {
@@ -96,7 +111,7 @@ class WeatherService {
         }
         System.out.println ( "full url " + fullUrl );
         AirQualityData airQualityData = restTemplate.getForObject ( fullUrl , AirQualityData.class );
-        System.out.println ( "airQualityData" + airQualityData );
         return ResponseEntity.ok ( airQualityData );
     }
+
 }
